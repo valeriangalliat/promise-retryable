@@ -1,0 +1,38 @@
+{
+  "name": "promise-retryable",
+  "version": "1.0.0",
+  "description": "Retryable promises.",
+  "homepage": "https://github.com/valeriangalliat/promise-retryable",
+  "license": "Unlicense",
+  "author": {
+    "name": "Valérian Galliat",
+    "url": "http://val.codejam.info/"
+  },
+  "files": [
+    "README.md",
+    "UNLICENSE",
+    "index.js",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valeriangalliat/promise-retryable.git"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "lint": "standard",
+    "prepublish": "npm test && npm run build",
+    "test": "npm run lint && npm run build && babel-node test"
+  },
+  "devDependencies": {
+    "babel": "^6.0.12",
+    "babel-cli": "^6.0.12",
+    "babel-eslint": "^4.1.3",
+    "babel-preset-es2015": "^6.0.14",
+    "promise-done": "^1.0.1",
+    "standard": "^5.3.1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
